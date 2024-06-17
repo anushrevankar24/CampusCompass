@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Compass</title>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">   
+        <a href="#">Campus Compass</a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color: #000;
+  background: #fff;
+}
+nav{
+  position: fixed;
+  background: #9400d3;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.menu .logo a{
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu .logo span{
+    height: 5rem;
+    width: 5rem;
+    background-color: #fff;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+  border-radius: 5rem;
+}
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.bg-img {
+  position: absolute;
+  top: 10%;
+  left:1%;
+  width: 100%;
+  height: 100%;
+  background: url('/static/background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+
+/* Add styles to the form container */
+/* .container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: white;
+} */
+
+
+ /* Style the submit button */
+ input[type="submit"] {
+            background-color:#4CAF50 ;
+            color: #fff;
+            padding: 10px 10px;
+            max-width: 150px;
+            display:block;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size:small
+        }
+
+input[type="submit"]:hover {
+            background-color:#228b22  ;
+        }
+
+/* Style form labels and select elements */
+label, select {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border:black;
+  border-radius: 10px;
+  font-size:medium
+}
+
+/* Add spacing between form elements */
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Style the form header */
+h2 {
+  color: rgb(255, 255, 255);
+}
+
+/* Adjust form container position for better visibility */
+.container {
+  top:30%;
+  transform: translateY(-50%);
+  left:60%
+}
+
+/* Add a subtle box-shadow to the form container */
+.container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container {
+  position: absolute;
+  right: 0;
+  margin: 50px;
+  max-width: 400px;
+  padding: 25px;
+  background-color: #9400d3  ; 
+  border-radius: 1rem;
+  color:#fff/* Change this to your desired shade of green */
+}
+</style>
+</head>
+<body>
+
+<h2>Form on Hero Image</h2>
+<div class="bg-img">
+    <form action="/generate_map" class="container" method="get">
+        <h1>Campus Compass</h1>
+        <label for="current_destination">Current Destination:</label>
+        <select id="current_destination" name="current_destination" required>
+            <option value="block1">Block 1</option>
+            <option value="block2">Block 2</option>
+            <option value="block3">Block 3</option>
+            <option value="block5">Block 5</option>
+            <option value="gymnasium">NITK Gym</option>
+            <option value="mega hostel1">Mega Towers 1</option>
+            <option value="research building">CIDS</option>
+            <option value="reasearch building">CIDS</option>
+            <option value="e library">E Library</option>
+            <option value="post office">Post Office</option>
+            <option value="mega hostel3">Mega Towers 3</option>
+            <option value="shiwalik hostel">Shiwalik Hostel</option>
+            <option value="mega hostel2">Mega Towers 2</option>
+            <option value="mega mess">Mega Mess</option>
+            <option value="food court">Food Court</option>
+            <option value="new pg hostel">PG Hostel</option>
+            <option value="sports complex">Sports Complex</option>
+            <option value="deptOfChemAndPhy">Department of Chemistry</option>
+            <option value="health care centre">Health Care Center</option>
+            <option value="silver jublie">Silver Jublie Auditorium</option>
+            
+            <option value="node24">node24</option>
+        </select>
+        <label for="final_destination">Final Destination:</label>
+        <select id="final_destination" name="final_destination" required>
+            <option value="block1">Block 1</option>
+            <option value="block2">Block 2</option>
+            <option value="block3">Block 3</option>
+            <option value="block5">Block 5</option>
+            <option value="gymnasium">NITK Gym</option>
+            <option value="mega hostel1">Mega Towers 1</option>
+            <option value="research building">CIDS</option>
+            <option value="e library">E Library</option>
+            <option value="post office">Post Office</option>
+            <option value="mega hostel3">Mega Towers 3</option>
+            <option value="shiwalik hostel">Shiwalik Hostel</option>
+            <option value="mega hostel2">Mega Towers 2</option>
+            <option value="mega mess">Mega Mess</option>
+            <option value="food court">Food Court</option>
+            <option value="new pg hostel">PG Hostel</option>
+            <option value="sports complex">Sports Complex</option>
+            <option value="deptOfChemAndPhy">Department of Chemistry</option>
+            <option value="health care centre">Health Care Center</option>
+            <option value="silver jublie">Silver Jublie Auditorium</option>
+            <option value="research building">Research Building</option>
+            <option value="node24">node24</option>
+        </select>
+        <!-- <button type="submit" class="btn">Login</button> -->
+        <input type="submit" value="FIND">
+    </form>
+  
+</div>
+
+</body>
+</html>
