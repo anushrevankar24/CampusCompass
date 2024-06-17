@@ -24,17 +24,17 @@ Click on the "Find Path" button to generate and view the shortest path on the in
 Python\
 FastAPI\
 Pandas\
-Folium\
+Folium
 
 ## Folder Structure:
 
 CampusCompass/\
 ├── main.py\
-├── coordinates_2.xlsx\
+├── coordinates.xlsx\
 ├── templates/\
 │   └── index.html\
 ├── static/\
-│   └── background.jpg\
+│   └── background.jpg
 
 
 ## Local Setup Instructions
@@ -71,7 +71,7 @@ To start the Campus Compass application locally, follow these steps:
 2. Run the following command in the terminal of your preferred IDE (VSCode, for example) to start the FastAPI server:
 
     ```
-    uvicorn CampusCompass.main:app --reload 
+    uvicorn main:app --reload 
     ```
 
 3. Access the application through a web browser at `http://localhost:8000/`.
@@ -80,8 +80,6 @@ This command initializes the FastAPI server, enabling access to the Campus Compa
 
 ## Contributors
 - [Anush Revankar](https://github.com/anushrevankar24) -221AI009
-- Rohil Sharma -221AI033
-- Nishta Salunke -221AI027
 
 ## Contributing
 
